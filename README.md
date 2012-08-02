@@ -9,9 +9,11 @@ Reference: http://paulirish.com/2010/duck-punching-with-jquery/
 jQuery.arrayUnique() is freely available according to the GNU General Public License (http://www.gnu.org/licenses/gpl.html).
 
 
-**Example:**<br />
-var foo = [1,2,'three',2,'three',5];<br />
+**Example:**
+<pre>
+var foo = [1,2,'three',2,'three',5];
 var bar = [];
 
-bar = $.arrayUnique(foo);<br />
+bar = $.arrayUnique(foo);
 // bar now contains [1,2,5,'three'];
+</pre>
