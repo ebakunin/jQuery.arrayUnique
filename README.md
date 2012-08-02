@@ -15,5 +15,5 @@ var foo = [1,2,'three',2,'three',5];
 var bar = [];
 
 bar = $.arrayUnique(foo);
-// bar now contains [1,2,5,'three'];
+// bar now contains [1,2,'three',5];
 </pre>
