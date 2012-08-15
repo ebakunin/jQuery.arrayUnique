@@ -4,18 +4,20 @@
  * @author   Paul Irish
  * @editor   Eric Christenson
  * @date     23 February, 2010
- * @edit     2 August, 2012
+ * @edit     15 August, 2012
  * @license  GNU GPL (http://www.gnu.org/licenses/gpl.html)
  */
-(function($) {
+(function ($) {
+    var result;
     $.arrayUnique = function (arr) {
-        if (!!arr[0].nodeType) {
-            return $.unique.apply(this, arguments);
+        if (arr.length > 0 && !!arr[0].nodeType) {
+            result = $.unique.apply(this, arguments);
         } else {
             // reduce the array to contain no dupes via grep/inArray
-            return $.grep(arr, function (v,k) {
-                return $.inArray(v,arr) === k;
+            result = $.grep(arr, function (v, k) {
+                return $.inArray(v, arr) === k;
             });
-        }		
+        }
+		return result;
     };
 })(jQuery);
